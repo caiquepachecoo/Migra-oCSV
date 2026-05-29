@@ -274,10 +274,10 @@ function limparTudo() {
 
 function baixarCSV() {
 
-    let csv = "Modulo;Aula;Conteudo;Videos;Anexos\n";
+    let csv = "modulo,aula,conteudo,videos,anexos\n";
 
     linhas.forEach(l => {
-        csv += `"${l.modulo}";"${l.aula}";"${l.conteudo || ""}";"${l.video}";"${l.anexos || ""}"\n`;
+        csv += `"${l.modulo}","${l.aula}","${l.conteudo || ""}","${l.video}","${l.anexos || ""}"\n`;
     });
 
     const BOM = "\uFEFF";
